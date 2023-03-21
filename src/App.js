@@ -512,7 +512,12 @@ export default function MainPage() {
         alignItems: "center",
       }}
     >
-      <Switch name="id" checked={state.id} onChange={handleSwitchChange} />
+      <Switch
+        name="id"
+        checked={state.id}
+        onChange={handleSwitchChange}
+        color="default"
+      />
       <Typography>Trait ID</Typography>
     </div>,
     <div
@@ -521,7 +526,12 @@ export default function MainPage() {
         alignItems: "center",
       }}
     >
-      <Switch name="name" checked={state.name} onChange={handleSwitchChange} />
+      <Switch
+        name="name"
+        checked={state.name}
+        onChange={handleSwitchChange}
+        color="default"
+      />
       <Typography>Trait Name</Typography>
     </div>,
     <div
@@ -530,7 +540,12 @@ export default function MainPage() {
         alignItems: "center",
       }}
     >
-      <Switch name="desc" checked={state.desc} onChange={handleSwitchChange} />
+      <Switch
+        name="desc"
+        checked={state.desc}
+        onChange={handleSwitchChange}
+        color="default"
+      />
       <Typography>Description</Typography>
     </div>,
     <div
@@ -543,6 +558,7 @@ export default function MainPage() {
         name="dtype"
         checked={state.dtype}
         onChange={handleSwitchChange}
+        color="default"
       />
       <Typography>Data Type</Typography>
     </div>,
@@ -556,6 +572,7 @@ export default function MainPage() {
         name="pdata"
         checked={state.pdata}
         onChange={handleSwitchChange}
+        color="default"
       />
       <Typography>Personal Data</Typography>
     </div>,
@@ -607,7 +624,6 @@ export default function MainPage() {
       headerName: (
         <strong>
           <IconButton
-            color="primary"
             aria-label="more"
             aria-controls="long-menu"
             aria-haspopup="true"
@@ -979,8 +995,8 @@ export default function MainPage() {
                 count={rows.length}
                 rowsPerPage={rowsPerPage}
                 page={page}
-                onPageChange={handleChangePage}
-                onRowsPerPageChange={handleChangeRowsPerPage}
+                onChangePage={handleChangePage}
+                onChangeRowsPerPage={handleChangeRowsPerPage}
               />
               <Dialog
                 open={openDialog}
