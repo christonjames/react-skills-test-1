@@ -869,6 +869,7 @@ export default function MainPage() {
                     <TableRow>
                       <TableCell padding="checkbox">
                         <Checkbox
+                          color="default"
                           indeterminate={
                             selected.length > 0 && selected.length < rows.length
                           }
@@ -916,6 +917,7 @@ export default function MainPage() {
                           >
                             <TableCell padding="checkbox">
                               <Checkbox
+                                color="default"
                                 checked={isItemSelected}
                                 onClick={(event) =>
                                   handleSelectClick(event, row.traitId)
